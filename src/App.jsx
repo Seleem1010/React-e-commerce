@@ -16,29 +16,29 @@ import NotFound from "./Pages/NotFound";
 import Description from "./Pages/Description";
 import ProductsContextProvider from "./Contexts/ProductsContext";
 import Login from "./Pages/Login";
-
+import "./app.css";
 const App = () => {
   return (
-    <>
-    <CartContextProvider>
-      <ProductsContextProvider>
-      <Navbar/>
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="store" element={<Store />}/>
-        <Route path="store/:id/:quantity" element={<Description />}/>
-        <Route path="login" element={<Login />}/>
-        <Route path="*" element={<NotFound />}/>
+    <div
+      style={{
+        height: "inherit",
+      }}
+    >
+      <CartContextProvider>
+        <ProductsContextProvider>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="store" element={<Store />} />
+            <Route path="store/:id/:quantity" element={<Description />} />
+            <Route path="login" element={<Login />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
 
-      </Routes>
-     
-      <Footer />
-      </ProductsContextProvider>
-      
-    </CartContextProvider>
-      
-    </>
+          <Footer />
+        </ProductsContextProvider>
+      </CartContextProvider>
+    </div>
   );
 };
 export default App;
-
