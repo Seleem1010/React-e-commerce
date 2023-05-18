@@ -10,7 +10,7 @@ export default function Login() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundImage:
-          "url(https://app.globalradar.com/Images/login-background.jpg  )",
+          "url(https://e0.pxfuel.com/wallpapers/6/121/desktop-wallpaper-retro-80s-ride-background-and-80s-car-aesthetic.jpg  )",
       }}
     >
       <div
