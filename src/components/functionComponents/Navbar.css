@@ -1,0 +1,48 @@
+.navbar-custom {
+  background-color: #343a40;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.brand-icon {
+  font-size: 40px;
+  margin-right: auto;
+  color: #fff;
+}
+
+.nav-link {
+  font-size: 20px;
+  margin-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.cart-link {
+  font-size: 20px;
+  margin-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  font-size: 25px;
+  margin-right: 5px;
+}
+
+.cart-count {
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  font-size: 14px;
+  height: 20px;
+  line-height: 20px;
+  position: absolute;
+  right: -10px;
+  text-align: center;
+  top: -10px;
+  width: 20px;
+}
