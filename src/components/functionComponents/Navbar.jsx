@@ -28,10 +28,12 @@ function CollapsibleExample() {
             <NavLink className="nav-link" to="/store">Store</NavLink>
             <NavLink className="nav-link" to="/login">LogIn</NavLink>
             
+            
           </Nav>
           <Nav>
+          <NavLink className="nav-link" to="/Cart"><FaShoppingCart></FaShoppingCart>: {mycounter}</NavLink>
             
-            <Nav.Link className="text-danger" disabled><FaShoppingCart></FaShoppingCart> : {mycounter}</Nav.Link>
+            {/* <Nav.Link className="text-danger" disabled><FaShoppingCart></FaShoppingCart> : {mycounter}</Nav.Link> */}
           </Nav>
         </Navbar.Collapse>
       </Container>
