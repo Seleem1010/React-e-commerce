@@ -7,6 +7,10 @@
 import Navbar from "./components/functionComponents/Navbar";
 
 import Footer from "./components/functionComponents/Footer";
+import Aboutimg from "./components/functionComponents/Aboutimg";
+import Newfooter from "./components/functionComponents/Newfooter";
+
+import Imgsection from "./components/functionComponents/ImgSection";
 // import { useState } from "react";
 import CartContextProvider from "./Contexts/CartContext";
 import { Route, Routes } from "react-router";
@@ -17,6 +21,7 @@ import Description from "./Pages/Description";
 import ProductsContextProvider from "./Contexts/ProductsContext";
 import Login from "./Pages/Login";
 import "./app.css";
+import ImgSection from "./components/functionComponents/ImgSection";
 const App = () => {
   return (
     <div
@@ -34,8 +39,9 @@ const App = () => {
             <Route path="login" element={<Login />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-
-          <Footer />
+          <ImgSection/>
+          <Aboutimg/>
+          <Newfooter/>
         </ProductsContextProvider>
       </CartContextProvider>
     </div>
