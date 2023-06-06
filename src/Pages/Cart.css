@@ -1,0 +1,24 @@
+.card-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -10px;
+  }
+  
+  .card-item {
+    width: calc(33.33% - 20px);
+    margin: 0 10px 20px;
+  }
+  
+  .card-image {
+    width: 40%;
+    margin-right: 20px;
+  }
+  
+  .card-details {
+    width: 60%;
+  }
+  
+  .card-buttons {
+    margin-top: 10px;
+  }

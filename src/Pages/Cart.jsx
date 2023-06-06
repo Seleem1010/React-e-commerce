@@ -1,5 +1,8 @@
 import React, { useContext } from "react";
 import { CartItemsContext } from "../Contexts/CartItemsContext.jsx";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+import "./Cart.css"; // import custom CSS styles
 
 export default function Cart() {
   const { cartItems } = useContext(CartItemsContext);
@@ -15,25 +18,39 @@ export default function Cart() {
         name: item.name,
         price: item.price,
         quantity: 1,
+        image: item.image, // add image to the group object
       });
     }
     return groups;
   }, []);
 
-  console.log(groupedItems);
-
   return (
     <div>
-      <h2>Cart Items:</h2>
-      <ul>
-        {groupedItems.map((item) => (
-          <li key={item.name}>
-            <div>Name: {item.name}</div>
-            <div>Price: {item.price * item.quantity}</div>
-            <div>Quantity: {item.quantity}</div>
-          </li>
+      <h2 style={{ textAlign: "center", color: "red" }}>Cart</h2>
+      <div className="card-group">
+        {groupedItems.map((item, index) => (
+          <Card key={item.name} className="card-item">
+            <div className="card-image">
+              <Card.Img variant="top" src={item.image} />
+            </div>
+            <div className="card-details">
+              <Card.Title>{item.name}</Card.Title>
+              <Card.Text>
+                Price: {item.price} <br />
+                Quantity: {item.quantity}
+              </Card.Text>
+              <div className="card-buttons">
+                <Button variant="primary" disabled>
+                  +
+                </Button>{" "}
+                <Button variant="danger" disabled>
+                  -
+                </Button>
+              </div>
+            </div>
+          </Card>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
