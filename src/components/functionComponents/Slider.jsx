@@ -1,9 +1,3 @@
-//#####################################################
-//#####################################################
-//#####################################################
-//######################### Using functions #####################
-//#####################################################
-
 import Carousel from "react-bootstrap/Carousel";
 import { FaRegGrinTongueSquint } from "react-icons/fa";
 import { FaRegGrinTongueWink } from "react-icons/fa";

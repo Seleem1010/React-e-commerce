@@ -1,35 +1,41 @@
-// ######################################################
-// ######################################################
-// ######################################################
-// ######################## using function #####################
-// ######################################################
-
-import React, { useContext, useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import { FaRegGrinTongueSquint, FaShoppingCart } from "react-icons/fa";
-import {CartContext} from "../../Contexts/CartContext";
+import { FaRegGrinTongueSquint } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
+import { decrement, getCartItems, increment ,removeFromCart} from "../../Redux/slices/CartSlice";
 
 function BasicExample({ product }) {
-  const {mycounter , setMycounter} = useContext(CartContext)
+
+  const dispatch = useDispatch()
+  const {cartItems} = useSelector((state)=>state.CartSlice)
+
   const { image, title, description, price ,id} = product;
   const [quantity, setQuantity] = useState(0);
   const navigate = useNavigate()
 
+  const newItem = {
+    name: title,
+    image: image,
+    price: price,
+  };
+
   const add = () => {
     setQuantity(quantity + 1);
-    setMycounter(mycounter + 1)
+    dispatch(increment())
+    dispatch(getCartItems([...cartItems, newItem]))
   };
   const remove = () => {
     setQuantity(quantity - 1);
-    setMycounter(mycounter - 1);
+    dispatch(decrement())
+    dispatch(removeFromCart(title))
   };
   useEffect(() => {console.log("updated");}, [quantity]);
   return (
     <div className="col-12 col-md-6 col-lg-3 g-3">
       <Card >
-      <div className="text-center text-danger p-2"><FaShoppingCart></FaShoppingCart> : {mycounter}</div>
+      <div className="text-center text-danger p-2"></div>
 
         <Card.Img variant="top" src={image} style={{ height : "200px" , objectFit:"contain"}}/>
         <Card.Body>
