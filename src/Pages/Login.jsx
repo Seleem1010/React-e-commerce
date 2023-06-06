@@ -9,8 +9,10 @@ export default function Login() {
         minHeight: "85%",
         backgroundSize: "cover",
         backgroundPosition: "center",
+  
         backgroundImage:
-          "url(https://e0.pxfuel.com/wallpapers/6/121/desktop-wallpaper-retro-80s-ride-background-and-80s-car-aesthetic.jpg  )",
+          "url(https://static.vecteezy.com/system/resources/previews/005/026/647/original/luxury-black-gold-background-elegant-and-unique-free-vector.jpg )",
+        
       }}
     >
       <div
@@ -20,7 +22,7 @@ export default function Login() {
           justifyContent: "center",
         }}
       >
-        <h1>Login</h1>
+        <h1 class="bg">Login</h1>
       </div>
       <Form />
     </div>

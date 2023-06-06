@@ -10,7 +10,7 @@ function Aboutimg() {
   return (
     <>
     <div>
-        <br /><br />
+       
     < img src="image/Capture.PNG" alt="w" width="100%"></img>
     
     <br /></div>
