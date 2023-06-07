@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+var x;
 const initialState = {
     mycounter: 0,
     cartItems:[]
@@ -20,7 +21,11 @@ export const counterSlice = createSlice({
         state.cartItems = action.payload
     },
     removeFromCart: (state, action) => {
-        state.cartItems = state.cartItems.filter(item => item.name !== action.payload)
+        // // state.cartItems = state.cartItems.filter(item => item.name !== action.payload)
+        // const { index } = action.payload
+        // const item = state.cartItems[index]
+        // console.log(item)
+        // item.quantity -= 1
       }
   },
 })

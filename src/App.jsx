@@ -13,34 +13,25 @@ import Cart from "./Pages/Cart";
 import "./app.css";
 import Aboutimg from "./components/functionComponents/Aboutimg";
 
-
-
-
-
-
 const App = () => {
-  const dispatch = useDispatch()
-    useEffect(() => {
-      dispatch(getAllProducts())
-      });
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAllProducts());
+  });
   return (
     <>
-
-      <CarNavbar/>
+      <CarNavbar />
       <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="cars" element={<Store />}/>
-        <Route path="cars/:id/:quantity" element={<CarDescription />}/>
-        <Route path="about" element={<Login />}/>
-        <Route path="Cart" element={<Cart />}/>
-        <Route path="*" element={<NotFound />}/>
+        <Route path="/" element={<Home />} />
+        <Route path="cars" element={<Store />} />
+        <Route path="cars/:id/:quantity" element={<CarDescription />} />
+        <Route path="about" element={<Login />} />
+        <Route path="Cart" element={<Cart />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
-      <Aboutimg/>
+      <Aboutimg />
       <CarFooter />
-      
-      
     </>
   );
 };
 export default App;
-

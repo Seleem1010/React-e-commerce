@@ -16,8 +16,8 @@ function CarNavbar() {
     <Navbar
       collapseOnSelect
       expand="lg"
-      bg="light"
-      variant="light"
+      bg="dark"
+      variant="dark"
       className="navbar-custom"
     >
       <Container fluid>
@@ -38,7 +38,7 @@ function CarNavbar() {
               Cars
             </NavLink>
             <NavLink className="nav-link" to="/about">
-              About Us
+              Login
             </NavLink>
           </Nav>
           <Nav className="ml-auto">

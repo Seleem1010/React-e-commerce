@@ -5,12 +5,13 @@ export default function Login() {
   return (
     <div
       style={{
-        minHeight: "85%",
+        // minHeight: "85%",
+        height: "100vh",
         backgroundSize: "cover",
         backgroundPosition: "center",
   
         backgroundImage:
-          "url(https://static.vecteezy.com/system/resources/previews/005/026/647/original/luxury-black-gold-background-elegant-and-unique-free-vector.jpg )",
+          "url(https://e0.pxfuel.com/wallpapers/6/121/desktop-wallpaper-retro-80s-ride-background-and-80s-car-aesthetic.jpg  )",
         
       }}
     >

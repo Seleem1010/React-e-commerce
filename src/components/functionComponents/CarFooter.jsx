@@ -5,7 +5,7 @@ function CarFooter() {
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
       <footer>
         <div class="footer-content">
-            <h3>Selim  Site</h3>
+        <h3>Motore  Site</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est aspernatur consequuntur commodi? Temporibus, quaerat voluptatum! Officia veritatis rem culpa! Iusto numquam ratione atque quae totam qui similique nam laboriosam quaerat?</p>
             <ul class="socials">
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
