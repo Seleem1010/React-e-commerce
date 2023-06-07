@@ -35,6 +35,7 @@ const App = () => {
       <Footer />
       </ProductsContextProvider>
       
+      
     </CartContextProvider>
       
     </>
