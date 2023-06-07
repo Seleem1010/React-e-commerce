@@ -1,14 +1,9 @@
-//#########################################################################
-//#########################################################################
-//#########################################################################
-//######################## using function ##################################
-//#########################################################################
-
-import React, { useContext} from "react";
+import React from "react";
 import Card from "./Card";
-import { ProductContext } from "../../Contexts/ProductsContext";
+import { useSelector } from "react-redux";
 export default function MyProductSection() {
-  const {products} = useContext(ProductContext);
+  
+  const {products} = useSelector(state => state.ProductSlice);
   
   return (
     <div className="container">

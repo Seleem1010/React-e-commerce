@@ -1,13 +1,5 @@
-//#####################################################
-//#####################################################
-//#####################################################
-//######################### Using functions #####################
-//#####################################################
-
 import Carousel from "react-bootstrap/Carousel";
-import { FaRegGrinTongueSquint } from "react-icons/fa";
-import { FaRegGrinTongueWink } from "react-icons/fa";
-import { FaRegGrinWink } from "react-icons/fa";
+
 
 function CarouselFadeExample() {
   return (
@@ -20,9 +12,9 @@ function CarouselFadeExample() {
         />
         <Carousel.Caption>
           <h3>
-            First slide label <FaRegGrinWink></FaRegGrinWink>
+          2023 BMW 3-Series 
           </h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <p>The BMW 3 Series gets new styling and more tech for the 2023 model year. The current seventh-generation model arrived for the 2019 model year, and though it has slipped down in our rankings since its zenith, it's one of the most recognizable cars in its segment. </p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -34,9 +26,9 @@ function CarouselFadeExample() {
 
         <Carousel.Caption>
           <h3>
-            Second slide label <FaRegGrinTongueWink></FaRegGrinTongueWink>
+          New 2021 Volkswagen Taigo coupe-SUV
           </h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>Volkswagen has confirmed pricing and opened order books for the Taigo - the T-Crosss sportier, more aggressive looking sibling</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -48,7 +40,7 @@ function CarouselFadeExample() {
 
         <Carousel.Caption>
           <h3>
-            Third slide label <FaRegGrinTongueSquint></FaRegGrinTongueSquint>
+          Mercedes-Benz C-Class
           </h3>
           <p>
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.

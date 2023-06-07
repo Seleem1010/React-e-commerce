@@ -1,44 +1,37 @@
-//#########################################################
-//#########################################################
-//#########################################################
-//##################### using function ######################
-//#########################################################
-
-import Navbar from "./components/functionComponents/Navbar";
-
-import Footer from "./components/functionComponents/Footer";
-// import { useState } from "react";
-import CartContextProvider from "./Contexts/CartContext";
 import { Route, Routes } from "react-router";
 import Home from "./Pages/Home";
 import Store from "./Pages/Store";
 import NotFound from "./Pages/NotFound";
-import Description from "./Pages/Description";
-import ProductsContextProvider from "./Contexts/ProductsContext";
+import CarDescription from "./Pages/CarDescription";
 import Login from "./Pages/Login";
+import CarFooter from "./components/functionComponents/CarFooter";
+import CarNavbar from "./components/functionComponents/CarNavbar";
+import { useDispatch } from "react-redux";
+import { getAllProducts } from "./Redux/slices/ProductSlice";
+import { useEffect } from "react";
+import Cart from "./Pages/Cart";
+import "./app.css";
+import Aboutimg from "./components/functionComponents/Aboutimg";
 
 const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAllProducts());
+  });
   return (
     <>
-    <CartContextProvider>
-      <ProductsContextProvider>
-      <Navbar/>
+      <CarNavbar />
       <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="store" element={<Store />}/>
-        <Route path="store/:id/:quantity" element={<Description />}/>
-        <Route path="login" element={<Login />}/>
-        <Route path="*" element={<NotFound />}/>
-
+        <Route path="/" element={<Home />} />
+        <Route path="cars" element={<Store />} />
+        <Route path="cars/:id/:quantity" element={<CarDescription />} />
+        <Route path="about" element={<Login />} />
+        <Route path="Cart" element={<Cart />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
-     
-      <Footer />
-      </ProductsContextProvider>
-      
-    </CartContextProvider>
-      
+      <Aboutimg />
+      <CarFooter />
     </>
   );
 };
 export default App;
-
