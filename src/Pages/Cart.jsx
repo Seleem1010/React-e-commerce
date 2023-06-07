@@ -34,10 +34,16 @@ export default function Cart() {
     setGroupedItems(newGroups);
   };
 
-  // decrement quantity and price of a group
+  // decrement quantity and price of a group or remove group if quantity reaches 0
   const decrementGroup = (index) => {
     const newGroups = [...groupedItems];
-    if (newGroups[index].quantity > 1) {
+    if (newGroups[index].quantity === 1) {
+      // enable - button when quantity is 1
+      newGroups[index].quantity -= 1;
+      newGroups[index].price -= newGroups[index].price;
+      setGroupedItems(newGroups.filter((item) => item.quantity !== 0)); // remove group from array if quantity reaches 0
+    } else {
+      // decrement quantity and price if quantity is greater than 1
       newGroups[index].quantity -= 1;
       newGroups[index].price -= newGroups[index].price / (newGroups[index].quantity + 1);
       setGroupedItems(newGroups);
@@ -67,7 +73,7 @@ export default function Cart() {
                 </div>
                 <div className="d-flex justify-content-between">
                   <button className="btn btn-primary" onClick={() => incrementGroup(index)}>+</button>
-                  <button className="btn btn-danger" onClick={() => decrementGroup(index)} disabled={item.quantity <= 1}>-</button>
+                  <button className="btn btn-danger" onClick={() => decrementGroup(index)} disabled={item.quantity <= 0}>-</button>
                 </div>
               </div>
             </div>
